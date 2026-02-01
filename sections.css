@@ -1,0 +1,869 @@
+/* ============================================
+   SASMIT POKHREL — Campaign Website
+   Sections: About, Agenda, Qualifications, Vision, Commitment, Support, Footer
+   ============================================ */
+
+/* ============================================
+   ABOUT / WHY MY CANDIDACY
+   ============================================ */
+.about {
+    padding: var(--space-3xl) 0;
+}
+
+/* Who Am I — Photo Feature */
+.whoami-feature {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+    margin-bottom: var(--space-2xl);
+}
+
+.whoami-photo-wrap {
+    position: relative;
+}
+
+.whoami-photo {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    z-index: 2;
+}
+
+.whoami-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.whoami-photo-accent {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: -16px;
+    bottom: -16px;
+    border: 3px solid var(--crimson);
+    border-radius: var(--radius-lg);
+    z-index: 1;
+}
+
+.whoami-content {
+    padding: var(--space-md) 0;
+}
+
+.whoami-heading {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: var(--text-dark);
+    margin-bottom: var(--space-md);
+    letter-spacing: -0.02em;
+    position: relative;
+}
+
+.whoami-heading::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--crimson), var(--gold));
+    margin-top: var(--space-sm);
+    border-radius: 2px;
+}
+
+.whoami-intro {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    font-weight: 500;
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
+}
+
+.whoami-content p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-body);
+    margin-bottom: var(--space-md);
+}
+
+.whoami-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: var(--space-md);
+}
+
+.whoami-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 18px;
+    background: var(--navy);
+    color: var(--white);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    border-radius: 100px;
+}
+
+.whoami-tag--bell {
+    background: var(--crimson);
+    font-size: 1.1rem;
+    padding: 8px 14px;
+}
+
+/* Why Candidacy Reason Text */
+.about-reason {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: var(--space-xl);
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--cream-dark);
+    border-top: 4px solid var(--crimson);
+    box-shadow: var(--shadow-sm);
+}
+
+.about-reason__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    width: 56px;
+    height: 56px;
+    background: rgba(192, 57, 43, 0.08);
+    border-radius: 50%;
+    margin-bottom: var(--space-md);
+}
+
+.about-lead {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    font-weight: 500;
+    margin-bottom: var(--space-md);
+    line-height: 1.8;
+}
+
+.about-reason p:last-child {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* ============================================
+   AGENDA
+   ============================================ */
+.agenda {
+    padding: var(--space-3xl) 0;
+    background: var(--white);
+}
+
+.agenda .section-header {
+    text-align: center;
+    max-width: 880px;
+    margin: 0 auto var(--space-2xl);
+}
+
+/* agenda .section-tag color defined in styles.css */
+
+.agenda .section-title {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+}
+
+.agenda .section-desc {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Items container --- */
+.agenda-items {
+    max-width: 880px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Continuous vertical line connecting all numbered circles */
+.agenda-items::before {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 25px;
+    bottom: 25px;
+    width: 2px;
+    background: var(--cream-dark);
+    transform: translateX(-50%);
+}
+
+/* --- Single agenda item: rail + content --- */
+.agenda-item {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 0;
+    padding-bottom: var(--space-xl);
+    margin-bottom: var(--space-xl);
+    border-bottom: none;
+}
+
+.agenda-item--last {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* --- Left Rail --- */
+.agenda-item__rail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4px;
+}
+
+.agenda-item__num {
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--crimson);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--crimson);
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: var(--white);
+    position: relative;
+    z-index: 1;
+}
+
+/* Hide individual lines — replaced by continuous line on .agenda-items */
+.agenda-item__line {
+    display: none;
+}
+
+/* --- Agenda item icon --- */
+.agenda-item__icon {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    line-height: 1;
+    display: block;
+    text-align: center;
+}
+
+/* --- Content area --- */
+.agenda-item__content {
+    padding-left: var(--space-lg);
+}
+
+.agenda-item__content h3 {
+    font-family: var(--font-display);
+    font-size: 1.55rem;
+    color: var(--text-dark);
+    line-height: 1.35;
+    letter-spacing: -0.015em;
+    margin-bottom: 12px;
+}
+
+.agenda-item__desc {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
+}
+
+.agenda-item__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.agenda-item__list li {
+    color: var(--text-body);
+    font-size: 1.02rem;
+    line-height: 1.7;
+    padding-left: 18px;
+    position: relative;
+}
+
+.agenda-item__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 6px;
+    height: 6px;
+    background: var(--crimson);
+    border-radius: 50%;
+}
+
+/* ============================================
+   QUALIFICATIONS
+   ============================================ */
+.qualifications {
+    padding: var(--space-3xl) 0;
+    background: var(--cream);
+}
+
+.qual-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+}
+
+.qual-heading {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--text-dark);
+    margin-bottom: var(--space-lg);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qual-icon {
+    font-size: 1.2rem;
+}
+
+.qual-item {
+    display: flex;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--cream-dark);
+}
+
+.qual-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.qual-marker {
+    width: 10px;
+    height: 10px;
+    min-width: 10px;
+    background: var(--crimson);
+    border-radius: 50%;
+    margin-top: 8px;
+}
+
+.qual-item h4 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+}
+
+.qual-item p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* ============================================
+   VISION
+   ============================================ */
+.vision {
+    padding: var(--space-3xl) 0;
+    background: var(--white);
+}
+
+.vision-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.vision-text {
+    margin-bottom: var(--space-xl);
+}
+
+.vision-lead {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    font-weight: 500;
+    margin-bottom: var(--space-lg);
+    line-height: 1.8;
+    padding-left: var(--space-lg);
+    border-left: 4px solid var(--crimson);
+    position: relative;
+}
+
+.vision-lead::before {
+    content: '\201C';
+    position: absolute;
+    top: -20px;
+    left: -8px;
+    font-size: 5rem;
+    font-family: Georgia, serif;
+    color: rgba(192, 57, 43, 0.12);
+    line-height: 1;
+}
+
+.vision-text p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: var(--space-md);
+}
+
+.vision-divider {
+    text-align: center;
+    padding: var(--space-sm) 0;
+    font-size: 1.5rem;
+    opacity: 0.4;
+    position: relative;
+    margin-bottom: var(--space-md);
+}
+
+.vision-divider::before,
+.vision-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: calc(50% - 30px);
+    height: 1px;
+    background: var(--cream-dark);
+}
+
+.vision-divider::before { left: 0; }
+.vision-divider::after { right: 0; }
+
+.vision-closing {
+    font-style: italic;
+    color: var(--text-dark);
+    font-weight: 500;
+    background: linear-gradient(135deg, rgba(212, 160, 23, 0.06) 0%, rgba(192, 57, 43, 0.04) 100%);
+    padding: var(--space-md) var(--space-lg);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(212, 160, 23, 0.15);
+}
+
+.vision-appeal {
+    text-align: center;
+    padding: var(--space-xl);
+    background: var(--navy);
+    border-radius: var(--radius-lg);
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.vision-appeal::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(192, 57, 43, 0.15) 0%, transparent 60%);
+}
+
+.vision-appeal p {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+}
+
+.appeal-bell {
+    font-size: 3rem;
+    margin-top: var(--space-sm);
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    transform-origin: top center;
+    user-select: none;
+    position: relative;
+    z-index: 1;
+}
+
+.appeal-bell.ringing {
+    animation: bellRingClick 0.8s ease-in-out;
+    filter: drop-shadow(0 0 12px rgba(212, 160, 23, 0.35));
+}
+
+/* ============================================
+   SUPPORT / CTA
+   ============================================ */
+.support {
+    padding: var(--space-3xl) 0;
+    background: var(--navy);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.support::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 50% 50%, rgba(192, 57, 43, 0.15) 0%, transparent 60%);
+}
+
+.support-content {
+    position: relative;
+    z-index: 1;
+}
+
+.support h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 6vw, 4rem);
+    color: var(--white);
+    letter-spacing: -0.02em;
+    margin-bottom: var(--space-xs);
+}
+
+.support-subtitle {
+    color: var(--crimson-light);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-xl);
+}
+
+.support-bell-giant {
+    font-size: 6rem;
+    margin-bottom: var(--space-md);
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    transform-origin: top center;
+    user-select: none;
+}
+
+.support-bell-giant.ringing {
+    animation: bellRingClick 0.8s ease-in-out;
+    filter: drop-shadow(0 0 14px rgba(212, 160, 23, 0.35));
+}
+
+.support-text {
+    font-size: 1.2rem;
+    color: var(--text-on-dark);
+    margin-bottom: var(--space-lg);
+}
+
+.support-name {
+    margin-bottom: var(--space-sm);
+}
+
+.support-name span {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--gold-light);
+}
+
+.support-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: var(--text-on-dark-muted);
+    font-size: 0.9rem;
+    margin-bottom: var(--space-lg);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm);
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    color: var(--text-on-dark);
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: var(--crimson);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+    padding: var(--space-lg) 0;
+    background: var(--navy-mid);
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--white);
+    margin-bottom: var(--space-xs);
+}
+
+.footer-tagline {
+    color: var(--text-on-dark-muted);
+    font-size: 0.9rem;
+    margin-bottom: var(--space-sm);
+}
+
+.footer-meta {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm);
+    color: var(--text-on-dark-muted);
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+/* ============================================
+   RESPONSIVE — Sections
+   ============================================ */
+@media (max-width: 1024px) {
+    .whoami-feature {
+        grid-template-columns: 320px 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .whoami-feature {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .whoami-photo-wrap {
+        max-width: 340px;
+        margin: 0 auto;
+    }
+    .whoami-heading::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .whoami-tags {
+        justify-content: center;
+    }
+    .about-reason {
+        padding: var(--space-lg);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .qual-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .agenda-item {
+        grid-template-columns: 44px 1fr;
+    }
+    .agenda-item__num {
+        width: 32px;
+        height: 32px;
+        font-size: 0.75rem;
+    }
+    .agenda-item__content {
+        padding-left: var(--space-md);
+    }
+    .agenda-item__icon {
+        font-size: 1.2rem;
+        margin-top: 6px;
+    }
+    .agenda-item__content h3 {
+        font-size: 1.15rem;
+    }
+    .agenda-items::before {
+        left: 22px;
+    }
+
+    /* Vision */
+    .vision-lead {
+        font-size: 1.1rem;
+        padding-left: var(--space-md);
+        border-left-width: 3px;
+    }
+    .vision-lead::before {
+        font-size: 3.5rem;
+        top: -12px;
+        left: -6px;
+    }
+    .vision-closing {
+        padding: var(--space-sm) var(--space-md);
+    }
+    .vision-appeal {
+        padding: var(--space-lg);
+    }
+
+    /* Support */
+    .support {
+        padding: var(--space-2xl) 0;
+    }
+    .support-bell-giant {
+        font-size: 4rem;
+    }
+
+    /* Photo accent */
+    .whoami-photo-accent {
+        top: 8px;
+        left: 8px;
+        right: -8px;
+        bottom: -8px;
+    }
+
+    .footer-meta {
+        flex-direction: column;
+        gap: 4px;
+    }
+    .footer-meta span:nth-child(2) {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    /* About */
+    .whoami-intro {
+        font-size: 1rem;
+    }
+    .whoami-content p {
+        font-size: 0.95rem;
+    }
+    .whoami-tag {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+    .whoami-tag--bell {
+        padding: 6px 10px;
+        font-size: 1rem;
+    }
+    .about-reason {
+        padding: var(--space-md);
+    }
+    .about-reason__icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.6rem;
+    }
+    .about-lead {
+        font-size: 1rem;
+    }
+
+    /* Agenda */
+    .agenda-item {
+        grid-template-columns: 36px 1fr;
+        padding-bottom: var(--space-lg);
+        margin-bottom: var(--space-lg);
+    }
+    .agenda-items::before {
+        left: 18px;
+    }
+    .agenda-item__num {
+        width: 28px;
+        height: 28px;
+        font-size: 0.65rem;
+        border-width: 1.5px;
+    }
+    .agenda-item__icon {
+        font-size: 1rem;
+        margin-top: 4px;
+    }
+    .agenda-item__content {
+        padding-left: var(--space-sm);
+    }
+    .agenda-item__content h3 {
+        font-size: 1rem;
+        line-height: 1.3;
+    }
+    .agenda-item__desc {
+        font-size: 0.95rem;
+    }
+    .agenda-item__list {
+        gap: 8px;
+    }
+    .agenda-item__list li {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        padding-left: 14px;
+    }
+    .agenda-item__list li::before {
+        top: 9px;
+        width: 5px;
+        height: 5px;
+    }
+
+    /* Qualifications */
+    .qual-heading {
+        font-size: 1.15rem;
+    }
+    .qual-item {
+        gap: var(--space-sm);
+        margin-bottom: var(--space-md);
+        padding-bottom: var(--space-md);
+    }
+    .qual-item h4 {
+        font-size: 0.9rem;
+    }
+    .qual-item p {
+        font-size: 0.85rem;
+    }
+
+    /* Vision */
+    .vision-lead {
+        font-size: 1rem;
+        padding-left: var(--space-sm);
+    }
+    .vision-lead::before {
+        font-size: 2.5rem;
+        top: -8px;
+        left: -4px;
+    }
+    .vision-text p {
+        font-size: 0.95rem;
+    }
+    .vision-closing {
+        padding: var(--space-sm);
+        font-size: 0.95rem;
+    }
+    .vision-appeal {
+        padding: var(--space-md);
+    }
+    .vision-appeal p {
+        font-size: 1rem;
+    }
+    .appeal-bell {
+        font-size: 2rem;
+    }
+    .vision-divider::before,
+    .vision-divider::after {
+        width: calc(50% - 20px);
+    }
+
+    /* Support */
+    .support {
+        padding: var(--space-xl) 0;
+    }
+    .support-bell-giant {
+        font-size: 3rem;
+    }
+    .support-text {
+        font-size: 1rem;
+    }
+    .support-name span {
+        font-size: 1.2rem;
+    }
+    .support-subtitle {
+        font-size: 0.95rem;
+    }
+}
