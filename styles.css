@@ -623,6 +623,13 @@ ul { list-style: none; }
         min-height: auto;
     }
 
+    .hero-badge {
+        font-size: 0.6rem;
+        letter-spacing: 0.08em;
+        padding: 5px 14px;
+        white-space: nowrap;
+    }
+
     .hero-name span {
         font-size: clamp(2rem, 10vw, 4.5rem);
     }
