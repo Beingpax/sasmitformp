@@ -66,6 +66,24 @@ body {
     font-family: var(--font-nepali), sans-serif;
 }
 
+/* Nepali text size boosts — Devanagari renders visually smaller */
+[data-lang="ne"] .hero-badge {
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+}
+
+[data-lang="ne"] .hero-title {
+    font-size: 1.35rem;
+}
+
+[data-lang="ne"] .hero-subtitle {
+    font-size: 1.5rem;
+}
+
+[data-lang="ne"] .hero-symbol span {
+    font-size: 0.9rem;
+}
+
 img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
@@ -176,7 +194,7 @@ ul { list-style: none; }
 
 .nav-links a {
     color: var(--text-on-dark-muted);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -594,7 +612,7 @@ ul { list-style: none; }
     }
 
     .nav-links { display: none; }
-    .nav-menu-btn { display: flex; }
+    .nav-menu-btn { display: none; }
 
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -628,6 +646,23 @@ ul { list-style: none; }
         letter-spacing: 0.08em;
         padding: 5px 14px;
         white-space: nowrap;
+    }
+
+    [data-lang="ne"] .hero-badge {
+        font-size: 0.7rem;
+        letter-spacing: 0.04em;
+    }
+
+    [data-lang="ne"] .hero-title {
+        font-size: 1.15rem;
+    }
+
+    [data-lang="ne"] .hero-subtitle {
+        font-size: 1.25rem;
+    }
+
+    [data-lang="ne"] .hero-symbol span {
+        font-size: 0.8rem;
     }
 
     .hero-name span {
