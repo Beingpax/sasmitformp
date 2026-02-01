@@ -67,6 +67,10 @@ body {
 }
 
 /* Nepali text size boosts — Devanagari renders visually smaller */
+[data-lang="ne"] .hero-name span {
+    font-size: clamp(4rem, 12vw, 8rem);
+}
+
 [data-lang="ne"] .hero-badge {
     font-size: 0.88rem;
     letter-spacing: 0.08em;
@@ -643,6 +647,10 @@ ul { list-style: none; }
         font-size: clamp(2.5rem, 12vw, 4.5rem);
     }
 
+    [data-lang="ne"] .hero-name span {
+        font-size: clamp(3rem, 14vw, 5.5rem);
+    }
+
     .hero-cta-group {
         flex-direction: column;
         align-items: center;
@@ -703,6 +711,10 @@ ul { list-style: none; }
 
     .hero-name span {
         font-size: clamp(2rem, 10vw, 4.5rem);
+    }
+
+    [data-lang="ne"] .hero-name span {
+        font-size: clamp(2.4rem, 12vw, 5rem);
     }
 
     .hero-title {
