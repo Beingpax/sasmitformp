@@ -114,45 +114,48 @@
     padding: 8px 14px;
 }
 
-/* Why Candidacy Reason Text */
-.about-reason {
-    max-width: 800px;
+/* Why Candidacy — Statement */
+.about-statement {
+    position: relative;
+    max-width: 720px;
     margin: 0 auto;
-    text-align: center;
-    padding: var(--space-xl);
-    background: var(--white);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--cream-dark);
-    border-top: 4px solid var(--crimson);
-    box-shadow: var(--shadow-sm);
+    padding: var(--space-xl) 0;
 }
 
-.about-reason__icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    width: 56px;
-    height: 56px;
-    background: rgba(192, 57, 43, 0.08);
-    border-radius: 50%;
-    margin-bottom: var(--space-md);
+.about-statement__watermark {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: auto;
+    color: var(--cream-dark);
+    pointer-events: none;
+    opacity: 0.5;
 }
 
-.about-lead {
-    font-size: 1.2rem;
+.about-statement__quote {
+    position: relative;
+    padding-left: var(--space-lg);
+    border-left: 4px solid var(--crimson);
+    margin-bottom: var(--space-lg);
+}
+
+.about-statement__quote p {
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 3vw, 1.7rem);
     color: var(--text-dark);
-    font-weight: 500;
-    margin-bottom: var(--space-md);
-    line-height: 1.8;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
 }
 
-.about-reason p:last-child {
-    font-size: 1.05rem;
+.about-statement__body {
+    font-size: 1.08rem;
     color: var(--text-muted);
-    line-height: 1.8;
-    margin-bottom: 0;
+    line-height: 1.9;
+    margin-bottom: var(--space-lg);
 }
+
 
 /* ============================================
    AGENDA
@@ -186,13 +189,13 @@
     position: relative;
 }
 
-/* Continuous vertical line connecting all numbered circles */
+/* Continuous vertical line connecting all icons */
 .agenda-items::before {
     content: '';
     position: absolute;
-    left: 28px;
-    top: 25px;
-    bottom: 25px;
+    left: 32px;
+    top: 56px;
+    bottom: 56px;
     width: 2px;
     background: var(--cream-dark);
     transform: translateX(-50%);
@@ -201,7 +204,7 @@
 /* --- Single agenda item: rail + content --- */
 .agenda-item {
     display: grid;
-    grid-template-columns: 56px 1fr;
+    grid-template-columns: 64px 1fr;
     gap: 0;
     padding-bottom: var(--space-xl);
     margin-bottom: var(--space-xl);
@@ -219,25 +222,34 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 4px;
+    padding-top: 0;
+}
+
+/* --- Agenda item icon (top, primary) --- */
+.agenda-item__icon {
+    font-size: 2.2rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: rgba(192, 57, 43, 0.07);
+    border-radius: 50%;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .agenda-item__num {
     font-family: var(--font-display);
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     font-weight: 700;
-    color: var(--crimson);
-    letter-spacing: -0.02em;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
     line-height: 1;
-    width: 42px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid var(--crimson);
-    border-radius: 50%;
+    margin-top: 8px;
     flex-shrink: 0;
-    background: var(--white);
     position: relative;
     z-index: 1;
 }
@@ -245,15 +257,6 @@
 /* Hide individual lines — replaced by continuous line on .agenda-items */
 .agenda-item__line {
     display: none;
-}
-
-/* --- Agenda item icon --- */
-.agenda-item__icon {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    line-height: 1;
-    display: block;
-    text-align: center;
 }
 
 /* --- Content area --- */
@@ -655,8 +658,13 @@
     .whoami-tags {
         justify-content: center;
     }
-    .about-reason {
-        padding: var(--space-lg);
+    .about-statement__watermark {
+        width: 140px;
+        right: -20px;
+        opacity: 0.35;
+    }
+    .about-statement__quote p {
+        font-size: 1.2rem;
     }
 
     .about-grid {
@@ -668,25 +676,25 @@
     }
 
     .agenda-item {
-        grid-template-columns: 44px 1fr;
+        grid-template-columns: 52px 1fr;
+    }
+    .agenda-item__icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.7rem;
     }
     .agenda-item__num {
-        width: 32px;
-        height: 32px;
-        font-size: 0.75rem;
+        font-size: 0.65rem;
+        margin-top: 6px;
     }
     .agenda-item__content {
         padding-left: var(--space-md);
-    }
-    .agenda-item__icon {
-        font-size: 1.2rem;
-        margin-top: 6px;
     }
     .agenda-item__content h3 {
         font-size: 1.15rem;
     }
     .agenda-items::before {
-        left: 22px;
+        left: 26px;
     }
 
     /* Vision */
@@ -748,35 +756,39 @@
         padding: 6px 10px;
         font-size: 1rem;
     }
-    .about-reason {
-        padding: var(--space-md);
+    .about-statement {
+        padding: var(--space-md) 0;
     }
-    .about-reason__icon {
-        width: 48px;
-        height: 48px;
-        font-size: 1.6rem;
+    .about-statement__watermark {
+        display: none;
     }
-    .about-lead {
-        font-size: 1rem;
+    .about-statement__quote {
+        padding-left: var(--space-md);
+        border-left-width: 3px;
+    }
+    .about-statement__quote p {
+        font-size: 1.05rem;
+    }
+    .about-statement__body {
+        font-size: 0.95rem;
     }
 
     /* Agenda */
     .agenda-item {
-        grid-template-columns: 36px 1fr;
+        grid-template-columns: 42px 1fr;
         padding-bottom: var(--space-lg);
         margin-bottom: var(--space-lg);
     }
     .agenda-items::before {
-        left: 18px;
-    }
-    .agenda-item__num {
-        width: 28px;
-        height: 28px;
-        font-size: 0.65rem;
-        border-width: 1.5px;
+        left: 21px;
     }
     .agenda-item__icon {
-        font-size: 1rem;
+        width: 36px;
+        height: 36px;
+        font-size: 1.3rem;
+    }
+    .agenda-item__num {
+        font-size: 0.6rem;
         margin-top: 4px;
     }
     .agenda-item__content {
