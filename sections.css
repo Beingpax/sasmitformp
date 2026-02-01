@@ -811,6 +811,109 @@
     }
 }
 
+/* ============================================
+   NEPALI TEXT SIZE BOOSTS — Desktop
+   ============================================ */
+[data-lang="ne"] .whoami-heading {
+    font-size: clamp(2.2rem, 4.5vw, 3rem);
+}
+
+[data-lang="ne"] .whoami-intro {
+    font-size: 1.35rem;
+}
+
+[data-lang="ne"] .whoami-content p {
+    font-size: 1.2rem;
+}
+
+[data-lang="ne"] .whoami-tag {
+    font-size: 0.95rem;
+}
+
+[data-lang="ne"] .about-statement__quote p {
+    font-size: clamp(1.45rem, 3vw, 1.85rem);
+}
+
+[data-lang="ne"] .about-statement__body {
+    font-size: 1.2rem;
+}
+
+[data-lang="ne"] .agenda-item__content h3 {
+    font-size: 1.7rem;
+}
+
+[data-lang="ne"] .agenda-item__desc {
+    font-size: 1.25rem;
+}
+
+[data-lang="ne"] .agenda-item__list li {
+    font-size: 1.15rem;
+}
+
+[data-lang="ne"] .agenda-note {
+    font-size: 1.2rem;
+}
+
+[data-lang="ne"] .qual-heading {
+    font-size: 1.55rem;
+}
+
+[data-lang="ne"] .qual-item h4 {
+    font-size: 1.15rem;
+}
+
+[data-lang="ne"] .qual-item p {
+    font-size: 1.05rem;
+}
+
+[data-lang="ne"] .vision-lead {
+    font-size: 1.45rem;
+}
+
+[data-lang="ne"] .vision-text p {
+    font-size: 1.2rem;
+}
+
+[data-lang="ne"] .vision-closing {
+    font-size: 1.15rem;
+}
+
+[data-lang="ne"] .vision-appeal p {
+    font-size: 1.3rem;
+}
+
+[data-lang="ne"] .support h2 {
+    font-size: clamp(2rem, 6.5vw, 4.5rem);
+}
+
+[data-lang="ne"] .support-subtitle {
+    font-size: 1.25rem;
+}
+
+[data-lang="ne"] .support-text {
+    font-size: 1.35rem;
+}
+
+[data-lang="ne"] .support-name span {
+    font-size: 1.7rem;
+}
+
+[data-lang="ne"] .support-details {
+    font-size: 1.05rem;
+}
+
+[data-lang="ne"] .footer-logo {
+    font-size: 1.25rem;
+}
+
+[data-lang="ne"] .footer-tagline {
+    font-size: 1.05rem;
+}
+
+[data-lang="ne"] .footer-meta {
+    font-size: 0.95rem;
+}
+
 @media (max-width: 480px) {
     /* About */
     .whoami-intro {
@@ -959,5 +1062,119 @@
     }
     .support-subtitle {
         font-size: 0.95rem;
+    }
+}
+
+/* ============================================
+   NEPALI TEXT SIZE BOOSTS — Tablet (768px)
+   ============================================ */
+@media (max-width: 768px) {
+    [data-lang="ne"] .about-statement__quote p {
+        font-size: 1.35rem;
+    }
+
+    [data-lang="ne"] .agenda-item__content h3 {
+        font-size: 1.35rem;
+    }
+
+    [data-lang="ne"] .vision-lead {
+        font-size: 1.25rem;
+    }
+}
+
+/* ============================================
+   NEPALI TEXT SIZE BOOSTS — Mobile (480px)
+   ============================================ */
+@media (max-width: 480px) {
+    [data-lang="ne"] .whoami-heading {
+        font-size: clamp(1.8rem, 7vw, 2.4rem);
+    }
+
+    [data-lang="ne"] .whoami-intro {
+        font-size: 1.15rem;
+    }
+
+    [data-lang="ne"] .whoami-content p {
+        font-size: 1.1rem;
+    }
+
+    [data-lang="ne"] .whoami-tag {
+        font-size: 0.88rem;
+    }
+
+    [data-lang="ne"] .about-statement__quote p {
+        font-size: 1.2rem;
+    }
+
+    [data-lang="ne"] .about-statement__body {
+        font-size: 1.1rem;
+    }
+
+    [data-lang="ne"] .agenda-item__content h3 {
+        font-size: 1.15rem;
+    }
+
+    [data-lang="ne"] .agenda-item__desc {
+        font-size: 1.1rem;
+    }
+
+    [data-lang="ne"] .agenda-item__list li {
+        font-size: 1.05rem;
+    }
+
+    [data-lang="ne"] .agenda-note {
+        font-size: 1.1rem;
+    }
+
+    [data-lang="ne"] .qual-heading {
+        font-size: 1.3rem;
+    }
+
+    [data-lang="ne"] .qual-item h4 {
+        font-size: 1.05rem;
+    }
+
+    [data-lang="ne"] .qual-item p {
+        font-size: 1rem;
+    }
+
+    [data-lang="ne"] .vision-lead {
+        font-size: 1.15rem;
+    }
+
+    [data-lang="ne"] .vision-text p {
+        font-size: 1.1rem;
+    }
+
+    [data-lang="ne"] .vision-closing {
+        font-size: 1.1rem;
+    }
+
+    [data-lang="ne"] .vision-appeal p {
+        font-size: 1.15rem;
+    }
+
+    [data-lang="ne"] .support-text {
+        font-size: 1.15rem;
+    }
+
+    [data-lang="ne"] .support-name span {
+        font-size: 1.4rem;
+    }
+
+    [data-lang="ne"] .support-subtitle {
+        font-size: 1.1rem;
+    }
+
+    [data-lang="ne"] .support-details {
+        font-size: 1rem;
+    }
+
+    [data-lang="ne"] .footer-tagline {
+        font-size: 0.95rem;
+    }
+
+    [data-lang="ne"] .footer-meta {
+        font-size: 0.88rem;
     }
 }

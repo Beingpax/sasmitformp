@@ -68,20 +68,40 @@ body {
 
 /* Nepali text size boosts — Devanagari renders visually smaller */
 [data-lang="ne"] .hero-badge {
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     letter-spacing: 0.08em;
 }
 
 [data-lang="ne"] .hero-title {
-    font-size: 1.35rem;
+    font-size: 1.4rem;
 }
 
 [data-lang="ne"] .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.55rem;
 }
 
 [data-lang="ne"] .hero-symbol span {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+}
+
+[data-lang="ne"] .btn {
+    font-size: 1.05rem;
+}
+
+[data-lang="ne"] .nav-links a {
+    font-size: 1rem;
+}
+
+[data-lang="ne"] .section-tag {
+    font-size: 0.85rem;
+}
+
+[data-lang="ne"] .section-title {
+    font-size: clamp(2.2rem, 4.5vw, 3.3rem);
+}
+
+[data-lang="ne"] .section-desc {
+    font-size: 1.2rem;
 }
 
 img { max-width: 100%; display: block; }
@@ -649,20 +669,36 @@ ul { list-style: none; }
     }
 
     [data-lang="ne"] .hero-badge {
-        font-size: 0.7rem;
+        font-size: 0.78rem;
         letter-spacing: 0.04em;
     }
 
     [data-lang="ne"] .hero-title {
-        font-size: 1.15rem;
-    }
-
-    [data-lang="ne"] .hero-subtitle {
         font-size: 1.25rem;
     }
 
+    [data-lang="ne"] .hero-subtitle {
+        font-size: 1.35rem;
+    }
+
     [data-lang="ne"] .hero-symbol span {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    [data-lang="ne"] .btn {
+        font-size: 1rem;
+    }
+
+    [data-lang="ne"] .section-tag {
+        font-size: 0.78rem;
+    }
+
+    [data-lang="ne"] .section-title {
+        font-size: clamp(1.6rem, 6vw, 2.2rem);
+    }
+
+    [data-lang="ne"] .section-desc {
+        font-size: 1.1rem;
     }
 
     .hero-name span {
